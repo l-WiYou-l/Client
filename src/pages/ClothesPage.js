@@ -3,7 +3,7 @@ import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
 import bigStar from '../assets/bigStar.png'
 import {useHistory, useParams} from 'react-router-dom'
 import {fetchOneClothes} from "../http/clothesAPI";
-import {CLOTHES_ROUTE} from "../utils/consts";
+import {CLOTHES_ROUTE, SHOP_ROUTE} from "../utils/consts";
 import {$host} from "../http";
 import {useCart} from "../cart";
 
@@ -16,6 +16,7 @@ const ClothesPage = () => {
     }, [])
     const deleteOneClothes = async () => {
         const {data} = await $host.delete('api/clothes/' + clothes.id)
+        history.push(SHOP_ROUTE)
         return data
     }
     const { cart, setCart } = useCart();
