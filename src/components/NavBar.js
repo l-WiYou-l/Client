@@ -34,7 +34,7 @@ const NavBar = observer(() => {
                             onClick={() => history.push(BASKET_ROUTE)}
                         >
                             <Col xs={6} md={4}>
-                                <Image width={25} height={25} src="https://img-premium.flaticon.com/png/512/34/34627.png?token=exp=1623322524~hmac=82bf8ca8fa9efea9cf3082fc486f052e" rounded />
+                                <Image width={25} height={25} src="https://info-comp.ru/install-postgresql-13-on-ubuntu-server" rounded />
                             </Col>
                         </Button>
                         {userData.role === "ADMIN" ?
